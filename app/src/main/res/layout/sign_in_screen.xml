@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Background Rectangle at the Top -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_background" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/welcome_back_sign_in_to_your_account"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:lineSpacingExtra="8dp"
+        android:textStyle="bold" />
+
+    <!-- Mobile Number Input Field -->
+    <EditText
+        android:id="@+id/mobile_number"
+        android:layout_width="480dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/phone_icon"
+        android:hint="@string/mobile_number"
+        android:inputType="number"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#AFAFAF" />
+
+    <!-- Password Input Field -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="480dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/padlock_icon"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#AFAFAF" />
+
+    <!-- OTP Input Field -->
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="480dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/otp_icon"
+        android:hint="@string/otp"
+        android:inputType="number"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#AFAFAF" />
+
+    <!-- Forgot Password Text -->
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/forgot_password"
+        android:textColor="#063B66"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- Send OTP Button -->
+    <Button
+        android:id="@+id/sendOtpButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="570dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/send_otp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/button_color" />
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="640dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_in"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/button_color" />
+
+    <!-- Sign Up Navigation (Horizontal Layout) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="730dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <!-- "Don't have an account?" Text -->
+        <TextView
+            android:id="@+id/don_t_have_an_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/primaryBlue"
+            android:textSize="18sp" />
+
+        <!-- "Sign Up" Text (Clickable) -->
+        <TextView
+            android:id="@+id/sign_up_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

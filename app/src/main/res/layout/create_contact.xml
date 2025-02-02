@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <!-- Header Section with Cancel and Confirm Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cancel_icon"
+            android:background="@color/white"
+            android:contentDescription="@string/cancel"/>
+
+        <TextView
+            android:id="@+id/new_contact_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/new_contact"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/confirm_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/correct_icon"
+            android:background="@color/white"
+            android:contentDescription="@string/confirm"/>
+    </LinearLayout>
+
+    <!-- Input Fields Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- Name Input -->
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:hint="@string/enter_name"/>
+
+        <!-- Mobile Number Input -->
+        <TextView
+            android:id="@+id/mobile_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_number"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/input_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:hint="@string/enter_mobile_number"
+            android:inputType="phone"/>
+    </LinearLayout>
+</LinearLayout>

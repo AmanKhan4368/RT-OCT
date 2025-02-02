@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Search contact search bar -->
+    <EditText
+        android:id="@+id/search_contact"
+        android:layout_width="480dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:autofillHints="Search contacts"
+        android:background="@drawable/search_contact_box"
+        android:drawableStart="@drawable/search_icon"
+        android:drawableEnd="@drawable/add_contact_icon"
+        android:drawablePadding="10dp"
+        android:hint="@string/search_contacts_text"
+        android:inputType="text"
+        android:textColorHint="#666666"
+        android:textSize="25sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp" />
+
+    <!-- Line Below Search Bar -->
+    <View
+        android:id="@+id/line_above_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/search_contact" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line_above_scrollview"
+        android:layout_above="@id/line_below_scrollview">
+
+        <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:importantForAccessibility="yes">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorite_contacts"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_contacts"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Line Above Icon Container -->
+    <View
+        android:id="@+id/line_below_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@id/icon_container" />
+
+    <!-- Bottom Navigation Icons with TextViews (replacing LinearLayouts) -->
+    <LinearLayout
+        android:id="@+id/icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="15dp">
+
+        <!-- Recent Calls Icon -->
+        <TextView
+            android:id="@+id/recent_icon"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/recent"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:drawableTopCompat="@drawable/phone_call_icon"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Dialpad Icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/dialpad_icon"
+            android:src="@drawable/dialpad_icon"/>
+
+        <!-- Contacts Icon -->
+        <TextView
+            android:id="@+id/contact_icon"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            app:drawableTopCompat="@drawable/contact_icon" />
+    </LinearLayout>
+</RelativeLayout>

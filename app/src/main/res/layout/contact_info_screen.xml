@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top horizontal layout for back and more options buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="horizontal">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:contentDescription="@string/back_arrow_icon"
+            android:src="@drawable/back_arrow_icon" />
+
+        <!-- Spacer to push buttons apart evenly -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <!-- More Options Button -->
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/more_options_icon"
+            android:src="@drawable/more_option_icon"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Profile section -->
+    <LinearLayout
+        android:id="@+id/profile_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="125dp">
+
+        <!-- Profile Icon -->
+        <FrameLayout
+            android:id="@+id/profile_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp">
+
+            <!-- Background image for profile icon -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_icon_bg"
+                android:src="@drawable/profile_icon_bg" />
+
+            <!-- Initial letter text (e.g., "K") displayed over the profile icon -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/k"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+        <!-- Contact Name -->
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/kartikey_dhale"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <!-- Contact Number -->
+        <TextView
+            android:id="@+id/contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/_91_7979797979"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Options section for phone, video call, message, favorite, and block options -->
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/profile_frame">
+
+        <!-- Option for phone call -->
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/phone_call_icon"
+                android:src="@drawable/phone_call_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/phone_call"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Option for video call -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/video_call_icon"
+                android:contentDescription="@string/video_call_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_call"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Option for messaging -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/message_icon"
+                android:contentDescription="@string/message_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Option for adding to favorites -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/favorite_icon"
+                android:contentDescription="@string/favorite_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorite"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Option for blocking the contact -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/block_contact_icon"
+                android:contentDescription="@string/block_contact_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/block"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Horizontal divider line -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/options" />
+
+    <!-- Call history label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/call_history"
+        android:textSize="14sp"
+        android:layout_below="@id/line"/>
+
+</RelativeLayout>
