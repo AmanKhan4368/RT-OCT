@@ -36,6 +36,9 @@
     </activity>
 
     <!-- Line for ContactScreenActivity -->
-    <activity android:name=".ContactScreenActivity" />
+    <activity
+        android:name=".ContactScreenActivity"
+        android:windowSoftInputMode="adjustPan">
+    </activity>
 </application>
 </manifest>

@@ -75,4 +75,5 @@
     <string name="block_contact_icon">Block Contact Icon</string>
     <string name="block">Block</string>
     <string name="call_history">Call History</string>
+    <string name="backspace">Backspace</string>
 </resources>
