@@ -42,24 +42,25 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_below="@id/line_above_scrollview"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:autofillHints=""
         android:background="@null"
         android:inputType="phone"
-        android:padding="16dp"
+        android:padding="5dp"
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:drawableEnd="@drawable/call_icon" />
 
     <!-- Scrollable Content -->
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:layout_below="@id/line_above_scrollview"
         android:layout_above="@id/line_below_scrollview">
 
@@ -104,14 +105,6 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true"/>
-
-        <!-- Dialpad Icon -->
-        <ImageView
-            android:id="@+id/dialpad_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/dialpad_icon"
-            android:src="@drawable/dialpad_icon"/>
 
         <!-- Contacts Icon -->
         <TextView

@@ -97,14 +97,6 @@
             android:clickable="true"
             android:focusable="true"/>
 
-        <!-- Dialpad Icon -->
-        <ImageView
-            android:id="@+id/dialpad_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/dialpad_icon"
-            android:src="@drawable/dialpad_icon"/>
-
         <!-- Contacts Icon -->
         <TextView
             android:id="@+id/contact_icon"
