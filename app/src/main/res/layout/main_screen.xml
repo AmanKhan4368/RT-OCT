@@ -34,33 +34,12 @@
         android:background="@android:color/darker_gray"
         android:layout_below="@id/search_contact" />
 
-    <!-- Number Dialpad (Initially Hidden) -->
-    <EditText
-        android:id="@+id/number_display"
-        android:layout_width="480dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_below="@id/line_above_scrollview"
-        android:gravity="center"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:autofillHints=""
-        android:background="@null"
-        android:inputType="phone"
-        android:padding="5dp"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        android:drawableEnd="@drawable/call_icon" />
 
     <!-- Scrollable Content -->
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
         android:layout_below="@id/line_above_scrollview"
         android:layout_above="@id/line_below_scrollview">
 
