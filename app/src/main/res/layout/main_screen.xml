@@ -30,14 +30,36 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@android:color/darker_gray"
         android:layout_below="@id/search_contact" />
+
+    <!-- Number Dialpad (Initially Hidden) -->
+    <EditText
+        android:id="@+id/number_display"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/line_above_scrollview"
+        android:gravity="center_horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:autofillHints=""
+        android:background="@null"
+        android:inputType="phone"
+        android:padding="16dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <!-- Scrollable Content -->
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         android:layout_below="@id/line_above_scrollview"
         android:layout_above="@id/line_below_scrollview">
 
@@ -85,6 +107,7 @@
 
         <!-- Dialpad Icon -->
         <ImageView
+            android:id="@+id/dialpad_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/dialpad_icon"
